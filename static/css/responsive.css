@@ -1,0 +1,106 @@
+/* Responsive Design and the Breakpoints*/
+
+/* 
+Good practices: Add at least two media queries.
+
+Follow the brakpoints of Microsoft Documentation:
+
+Phone
+_ Small (Smaller than 640px): 
+    @media(max-width:640px){
+
+    }
+
+Tables
+_ Medium (641px and 1007px):
+    @media((min-width:641px) and (max-width: 1007px)) {	   
+    }
+*/
+
+/*Phone View*/
+@media(max-width:640px) {
+    html {
+        font-size: 10px;
+    }
+
+    label {
+        cursor: pointer;
+    }
+
+    header {
+        flex-direction: column;
+        height: max-content;
+        padding: 2%;
+    }
+
+    .nav-link {
+        flex-direction: column;
+    }
+
+    .nav-btn {
+        display: inline-block;
+    }
+
+    /*Toggle Function*/
+    #nav-check:not(:checked)~.nav-link {
+        height: 0px;
+        overflow: hidden;
+    }
+
+    #nav-check:checked~.nav-link {
+        height: auto;
+        overflow: auto;
+    }
+
+    /*---- Footer ----*/
+    footer {
+        flex-direction: column;
+    }
+
+    footer nav {
+        height: fit-content;
+    }
+
+}
+
+/*Tablet View*/
+@media(max-width: 1007px) {
+    html {
+        font-size: 12px;
+    }
+
+    /*Responsive Design for Sections*/
+    .about-section {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .description-container {
+        width: 100%;
+    }
+
+    .img-container {
+        margin-bottom: 4rem;
+    }
+
+    /*---- Projects Section ----*/
+    .project-card {
+        width: 100%;
+    }
+
+    .project-card a {
+        width: 100%;
+        flex-direction: column;
+        height: min-content;
+    }
+
+    .project-card a img {
+        width: 100%;
+        height: 25rem;
+        object-fit: cover;
+        object-position: center 50%;
+    }
+
+    
+}
